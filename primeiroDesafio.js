@@ -5,7 +5,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
-function calcularNivel(XP) {
+function calcularRank(XP) {
   if (XP >= 1 && XP <= 1000) {
     return "Ferro";
   } else if (XP >= 1001 && XP <= 2000) {
@@ -28,7 +28,7 @@ function calcularNivel(XP) {
 rl.question("Qual é o nome do seu herói? ", function(nomePersonagem) {
   let XP = Math.floor(Math.random() * 10000) + 1;
 
-  let rank = calcularNivel(XP);
+  let rank = calcularRank(XP);
 
   console.log(`O herói ${nomePersonagem} está no rank ${rank} `);
   rl.close();
